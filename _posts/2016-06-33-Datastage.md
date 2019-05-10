@@ -10,41 +10,43 @@ tags:
     - ETL
 ---
 
-###什么是ETL
+### 什么是ETL
 从数据源中抽取数据（Extraction），然后对这些数据进行转化（Transformation），最终加载（Loading）到目标数据库或数据仓库中去，这就是我们通常所说的“ETL过程”，它是数据整合的核心内容
-####ETL之前要对源数据作数据内容分析
+#### ETL之前要对源数据作数据内容分析
 - 数据内容格式、类型、长度，不同的字符集等
 - 收集商业逻辑，了解客户的需求，从而觉醒ETL的策略
-####脏数据的清洗
+#### 脏数据的清洗
 - 数据的完整性和一致性
-###传统ETL方法的弊端
+### 传统ETL方法的弊端
 - 需要手工编写大量的代码，费时费力
 - 难以扩展、维护费用高
 - 需要不断调整代码来符合需求的变化
 - 对于不同的源和目标需要分别编写抽取和加载的代码
 - 难以对元数据进行管理
-###ETL工具的优点
+### ETL工具的优点
 - 图形化的界面，易于理解和操作
 - 大数据处理能力强
 - 能够处理多种文件形式的数据
-###常见的ETL工具
+### 常见的ETL工具
 - IBM公司的DataStage
 - Informatica
 - SAP Data Integrator
 
-###什么是DataStage
-####DataStage是一套完成高效的专业数据整合工具。它可用于
+
+
+### 什么是DataStage
+#### DataStage是一套完成高效的专业数据整合工具。它可用于
 - 数据仓库（Data Warehouse）
 - 数据集市（Data Mart）
 - 系统迁移（System Migration）
-####通过DataStage
+#### 通过DataStage
 可以对ETL过程进行方便的管理
 通过图形化的界面设计作业，对数据进行抽取、转换和加载。
 可以对作业的执行进行调度和监控
 使用内建的本地Repository，可方便的导入、导出和管理数据（Metadata）
-####出色的数据源连接能力
+#### 出色的数据源连接能力
 ETL工具的数据源连接能力是非常重要的，这是直接决定它能够应用的范围。DataStage能够直接连接非常多的数据源，包括：文本文件，XML文件，企业应用程序等；几乎所有的数据库系统，比如DB2、Oracle、MS SQL Server、Informix等
-###DataStage的体系结构及其组件
+### DataStage的体系结构及其组件
 - DataStage的开发环境基于C/S模式
 - Client只能安装在Windows平台上面
 - Server支持多种平台，如Windows、Redhat Linux、AIX、HP－UNIX等。
@@ -53,39 +55,39 @@ ETL工具的数据源连接能力是非常重要的，这是直接决定它能�
 - DataStage Manager 导入元数据，备份工程
 - DataStage Designer 设计、编译、执行Job
 - Director 执行、调度Job，检查、监控Job的运行状态
-###如何使用DataStage完成工作
+### 如何使用DataStage完成工作
 - DataStage客户端工具连接到DataStage Server上进行ETL Job开发，DataStage Server再与后台的数据库连接起来进行数据处理
 - DataStage的客户端工具之间是相互合作的关系
-###ETL Job开发流程
+### ETL Job开发流程
 - 用DataStage Administrator 新建项目，并对项目的属性进行设置
 - 用DataStage Designer连接到新建的项目上进行图形化的ETL Job的设计
 - 用DataStage Director来监控Job的运行日志，对设计好的ETL Job设置运行计划，比如多长时间运行一次ETL Job
 - 用DataStage Manager进行ETL Job的备份，管理元数据等
-###DataStage Administrator
-###DataStage Designer and Manager
+### DataStage Administrator
+### DataStage Designer and Manager
 - 导入表定义
 - 备份工程
 - 导入备份工程
 - 图形化、拖拽式的创建、删除、编辑Job，对Job进行编译和运行
-###DataStage Director
+### DataStage Director
 - 对Job进行调度
 - 监控、记录Job运行的log
-###DataStage并行处理机制
-####管道式数据处理
+### DataStage并行处理机制
+#### 管道式数据处理
 - 流水线式的数据处理过程
 - 转换、清洗和加载同时进行
 - 在数据处理过程中数据不落地，减少I/O开销
 - 保持处理器始终被使用
-###分区算法（Partition Parallelism）
-####数据被分为多个子集（subsets）进行处理
+### 分区算法（Partition Parallelism）
+#### 数据被分为多个子集（subsets）进行处理
 这些子集被称为“分区”（节点nodes）
-####对每个分区里的数据都进行相同的操作
+#### 对每个分区里的数据都进行相同的操作
 例如：对数据进行过滤操作时，每个分区都会按照相同的方式对数据进行过滤
-####可以达到接近线性的扩展
+#### 可以达到接近线性的扩展
 假设数据在每个节点上时均匀分布的
 8个处理器快8倍
 24个处理器快24倍
-###常用Stage介绍
+### 常用Stage介绍
 #### Sequential file stage
 适用于一般顺序文件（定长或不定长），可识别文本文件或IBM大机EBCDIC文件
 可作为数据源或目标
