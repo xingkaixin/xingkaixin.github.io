@@ -52,8 +52,8 @@ kramdown:
 
 
 # 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+Disqus（https://disqus.com/）
+disqus_username: xingkaixin
 
 
 
@@ -66,7 +66,7 @@ kramdown:
 
 # Google Analytics
 ga_track_id: 'UA-54566142-1'            # Format: UA-xxxxxx-xx
-ga_domain: auto
+ga_domain: xingkaixin.me
 
 
 
