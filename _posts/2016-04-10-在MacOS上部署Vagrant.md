@@ -30,7 +30,7 @@ Ubuntu 14.04 (based on amd64 server iso file [https://github.com/kraksoft/vagran
 
     vagrant box add pinpin-master ~/box/ubuntu-14.04-amd64.box
 
-![](DraggedImage.png)
+![](https://raw.githubusercontent.com/xingkaixin/blog-img/master/img/DraggedImage.cc9ca882dc964fe88e0d074573149901.png)
 
 2. 初始化开发环境
 创建一个开发目录(`~/workspace/pinpin`)，也可以使用已有的目录，切换到这个目录，使用前面创建的镜像初始化。
@@ -40,7 +40,7 @@ Ubuntu 14.04 (based on amd64 server iso file [https://github.com/kraksoft/vagran
     vagrant up
     vagrant ssh
 
-![](DraggedImage-1.png)
+![](https://raw.githubusercontent.com/xingkaixin/blog-img/master/img/DraggedImage.6edc5a8d154e4352a722d1d46ccea4e3.png)
 
 
 安装pip
