@@ -1,1 +1,1 @@
-[XingKaiXin.me](https://xingkaixin.me)
+[XingKaiXin.me](http://xingkaixin.me)
